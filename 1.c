@@ -24,7 +24,7 @@ int main()
     printf("file descriptor: %d\n", fd);
 
     char student_id[] = "110156183";
-    ssize_t bytes_written = write(fd, student_id, sizeof(student_id)-1);
+    ssize_t bytes_written = write(fd, student_id, sizeof(student_id));
     if (bytes_written < 0) {
         perror("Error while writing to file");
         close(fd);
